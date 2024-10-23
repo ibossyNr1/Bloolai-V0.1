@@ -1,0 +1,137 @@
+<div class="fundament-page">
+    <h1 class="mb-4">Your AI Knowledge Base</h1>
+    <p class="lead mb-5">Review and manage the essential information gathered from previous steps to optimize your AI's performance.</p>
+
+    <div class="mb-4">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Fundament</li>
+            </ol>
+        </nav>
+    </div>
+
+    <div class="mb-4">
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search within your knowledge base" aria-label="Search" aria-describedby="button-search">
+            <button class="btn btn-outline-secondary" type="button" id="button-search"><i class="fas fa-search"></i></button>
+        </div>
+    </div>
+
+    <div class="accordion" id="fundamentAccordion">
+        <!-- Behavioral Settings Section -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingBehavior">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBehavior" aria-expanded="true" aria-controls="collapseBehavior">
+                    Behavioral Settings
+                </button>
+            </h2>
+            <div id="collapseBehavior" class="accordion-collapse collapse show" aria-labelledby="headingBehavior" data-bs-parent="#fundamentAccordion">
+                <div class="accordion-body">
+                    <div class="mb-3">
+                        <h3 class="h5">Brand Voice</h3>
+                        <p id="brandVoice">Professional, Friendly</p>
+                    </div>
+                    <div class="mb-3">
+                        <h3 class="h5">Tone</h3>
+                        <p id="tone">Neutral</p>
+                    </div>
+                    <div class="mb-3">
+                        <h3 class="h5">Humor Level</h3>
+                        <p id="humorLevel">Moderate</p>
+                    </div>
+                    <div class="mb-3">
+                        <h3 class="h5">Concreteness</h3>
+                        <p id="concreteness">Balanced</p>
+                    </div>
+                    <button class="btn btn-primary" id="editBehavior">Edit Behavioral Settings</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contextual Data Section -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingContextual">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseContextual" aria-expanded="false" aria-controls="collapseContextual">
+                    Contextual Data
+                </button>
+            </h2>
+            <div id="collapseContextual" class="accordion-collapse collapse" aria-labelledby="headingContextual" data-bs-parent="#fundamentAccordion">
+                <div class="accordion-body">
+                    <div class="mb-3">
+                        <h3 class="h5">Project Details</h3>
+                        <p id="projectDetails">Project Name: AI Integration, Company: TechCorp, Industry: Technology</p>
+                    </div>
+                    <div class="mb-3">
+                        <h3 class="h5">Competition Analysis</h3>
+                        <p id="competitionAnalysis">Main competitors: CompA, CompB, CompC</p>
+                    </div>
+                    <div class="mb-3">
+                        <h3 class="h5">Positioning</h3>
+                        <p id="positioning">Mission: To revolutionize AI integration in businesses</p>
+                    </div>
+                    <div class="mb-3">
+                        <h3 class="h5">Customer Behavior</h3>
+                        <p id="customerBehavior">Target demographic: Tech-savvy businesses, ages 25-45</p>
+                    </div>
+                    <button class="btn btn-primary" id="editContextual">Edit Contextual Data</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Specialist Insights Section -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingSpecialist">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpecialist" aria-expanded="false" aria-controls="collapseSpecialist">
+                    Specialist Insights
+                </button>
+            </h2>
+            <div id="collapseSpecialist" class="accordion-collapse collapse" aria-labelledby="headingSpecialist" data-bs-parent="#fundamentAccordion">
+                <div class="accordion-body">
+                    <div id="specialistInsights">
+                        <!-- Specialist insights will be dynamically populated here -->
+                    </div>
+                    <button class="btn btn-primary" id="editSpecialist">Edit Specialist Insights</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Collaboration Outcomes Section -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingCollaboration">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCollaboration" aria-expanded="false" aria-controls="collapseCollaboration">
+                    Collaboration Outcomes
+                </button>
+            </h2>
+            <div id="collapseCollaboration" class="accordion-collapse collapse" aria-labelledby="headingCollaboration" data-bs-parent="#fundamentAccordion">
+                <div class="accordion-body">
+                    <div id="collaborationOutcomes">
+                        <!-- Collaboration outcomes will be dynamically populated here -->
+                    </div>
+                    <button class="btn btn-primary" id="editCollaboration">Edit Collaboration Outcomes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-4">
+        <h3>Data Visualization</h3>
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <canvas id="behaviorChart"></canvas>
+            </div>
+            <div class="col-md-6 mb-4">
+                <canvas id="contextualChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-4">
+        <h3>Export Options</h3>
+        <div class="btn-group" role="group" aria-label="Export options">
+            <button type="button" class="btn btn-outline-primary" id="exportPDF">Export as PDF</button>
+            <button type="button" class="btn btn-outline-primary" id="exportWord">Export as Word</button>
+            <button type="button" class="btn btn-outline-primary" id="exportCSV">Export as CSV</button>
+        </div>
+    </div>
+</div>

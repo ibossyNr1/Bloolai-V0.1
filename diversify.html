@@ -1,0 +1,88 @@
+<div class="diversify-page">
+    <h1 class="mb-4">Connect the Best AI Services</h1>
+    <p class="lead mb-5">Explore and integrate a wide range of AI services, enhanced with Bloolai's contextual inputs.</p>
+
+    <div class="row mb-4">
+        <div class="col-md-6">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search AI services" aria-label="Search AI services" id="serviceSearch">
+                <button class="btn btn-outline-secondary" type="button" id="searchButton">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <select class="form-select" id="categoryFilter">
+                <option value="">All Categories</option>
+                <option value="language">Language Models</option>
+                <option value="image">Image Generation</option>
+                <option value="audio">Audio Processing</option>
+                <option value="data">Data Analysis</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="row" id="serviceCards">
+        <!-- Service cards will be dynamically inserted here -->
+    </div>
+
+    <div class="modal fade" id="serviceDetailModal" tabindex="-1" aria-labelledby="serviceDetailModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="serviceDetailModalLabel">Service Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Service details will be dynamically inserted here -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="activateService">Activate Service</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card mt-5">
+        <div class="card-header">
+            <h2 class="h5 mb-0">Usage Statistics</h2>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <canvas id="usageChart"></canvas>
+                </div>
+                <div class="col-md-6">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Service</th>
+                                <th>Usage</th>
+                                <th>Cost</th>
+                            </tr>
+                        </thead>
+                        <tbody id="usageTableBody">
+                            <!-- Usage data will be dynamically inserted here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card mt-5">
+        <div class="card-header">
+            <h2 class="h5 mb-0">Bloolai Enhancement</h2>
+        </div>
+        <div class="card-body">
+            <p>Bloolai enhances these AI services by providing contextual inputs based on your business data and preferences. This results in more accurate and relevant outputs tailored to your specific needs.</p>
+            <ul>
+                <li>Improved accuracy with industry-specific context</li>
+                <li>Personalized responses aligned with your brand voice</li>
+                <li>Seamless integration with your existing workflows</li>
+                <li>Continuous learning and adaptation to your business needs</li>
+            </ul>
+        </div>
+    </div>
+</div>

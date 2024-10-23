@@ -1,0 +1,147 @@
+<div class="wizard-page">
+    <h1 class="mb-4">Domain Analysis Wizard</h1>
+    <p class="lead mb-5">Let's analyze your company website to personalize your AI experience.</p>
+
+    <!-- Domain Input Section -->
+    <div class="card mb-4">
+        <div class="card-body text-center py-5">
+            <h2 class="h4 mb-4">Enter Your Company Domain</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">https://</span>
+                        <input type="text" class="form-control" id="domainInput" placeholder="www.yourcompany.com">
+                        <button class="btn btn-primary" type="button" id="analyzeDomain">
+                            <i class="fas fa-search me-2"></i>Analyze
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Analysis Progress -->
+    <div class="card mb-4 d-none" id="analysisProgress">
+        <div class="card-body">
+            <h3 class="h5 mb-3">Analyzing Website</h3>
+            <div class="progress mb-3">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 0%"></div>
+            </div>
+            <div class="analysis-steps">
+                <div class="step">
+                    <i class="fas fa-circle text-muted me-2"></i>
+                    <span>Connecting to website...</span>
+                </div>
+                <div class="step">
+                    <i class="fas fa-circle text-muted me-2"></i>
+                    <span>Extracting company information...</span>
+                </div>
+                <div class="step">
+                    <i class="fas fa-circle text-muted me-2"></i>
+                    <span>Analyzing brand elements...</span>
+                </div>
+                <div class="step">
+                    <i class="fas fa-circle text-muted me-2"></i>
+                    <span>Preparing results...</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Results Section -->
+    <div class="card mb-4 d-none" id="analysisResults">
+        <div class="card-header">
+            <h3 class="h5 mb-0">Analysis Results</h3>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <!-- Company Details -->
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header bg-light">
+                            <h4 class="h6 mb-0">Company Details</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <label class="form-label">Company Name</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="companyName">
+                                    <button class="btn btn-outline-secondary" type="button">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Industry</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="industry">
+                                    <button class="btn btn-outline-secondary" type="button">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Mission Statement</label>
+                                <div class="input-group">
+                                    <textarea class="form-control" id="mission" rows="3"></textarea>
+                                    <button class="btn btn-outline-secondary" type="button">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Brand Elements -->
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header bg-light">
+                            <h4 class="h6 mb-0">Brand Elements</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <label class="form-label">Core Values</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="coreValues">
+                                    <button class="btn btn-outline-secondary" type="button">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Brand Colors</label>
+                                <div class="d-flex gap-2 mb-2" id="brandColors">
+                                    <div class="color-sample" style="background-color: #007bff;"></div>
+                                    <div class="color-sample" style="background-color: #6c757d;"></div>
+                                    <div class="color-sample" style="background-color: #28a745;"></div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Logo</label>
+                                <div class="text-center p-3 border rounded">
+                                    <img id="companyLogo" src="#" alt="Company Logo" class="img-fluid mb-2 d-none">
+                                    <div class="mt-2">
+                                        <button class="btn btn-sm btn-outline-secondary">
+                                            <i class="fas fa-upload me-2"></i>Upload New Logo
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="d-flex justify-content-between mt-4">
+                <button type="button" class="btn btn-secondary" id="startOver">
+                    <i class="fas fa-redo me-2"></i>Start Over
+                </button>
+                <button type="button" class="btn btn-primary" id="confirmAnalysis">
+                    <i class="fas fa-check me-2"></i>Confirm and Continue
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

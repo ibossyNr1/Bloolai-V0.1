@@ -1,0 +1,136 @@
+<div class="automate-page">
+    <h1 class="mb-4">AI Process Automation</h1>
+    <p class="lead mb-5">Create powerful automated workflows by connecting AI functionalities and defining custom processes.</p>
+
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h2 class="h5 mb-0">Workflow Elements</h2>
+                </div>
+                <div class="card-body">
+                    <div id="elementPalette">
+                        <div class="element-item" draggable="true" data-type="trigger">
+                            <i class="fas fa-play-circle"></i> Trigger
+                        </div>
+                        <div class="element-item" draggable="true" data-type="action">
+                            <i class="fas fa-cog"></i> Action
+                        </div>
+                        <div class="element-item" draggable="true" data-type="condition">
+                            <i class="fas fa-code-branch"></i> Condition
+                        </div>
+                        <div class="element-item" draggable="true" data-type="agent">
+                            <i class="fas fa-robot"></i> AI Agent
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h2 class="h5 mb-0">Templates</h2>
+                </div>
+                <div class="card-body">
+                    <select id="templateSelect" class="form-select mb-2">
+                        <option value="">Select a template</option>
+                        <option value="customer-support">Customer Support</option>
+                        <option value="lead-generation">Lead Generation</option>
+                        <option value="data-analysis">Data Analysis</option>
+                        <option value="content-creation">Content Creation</option>
+                    </select>
+                    <button id="loadTemplate" class="btn btn-outline-primary btn-sm">Load Template</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-9">
+            <div class="card mb-4">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h2 class="h5 mb-0">Workflow Builder</h2>
+                    <div>
+                        <button id="saveWorkflow" class="btn btn-primary btn-sm me-2">Save Workflow</button>
+                        <button id="clearWorkflow" class="btn btn-outline-secondary btn-sm">Clear</button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div id="workflowCanvas" class="border rounded p-3" style="height: 500px; position: relative;">
+                        <!-- Workflow elements will be added here dynamically -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h2 class="h5 mb-0">Workflow Settings</h2>
+                </div>
+                <div class="card-body">
+                    <form id="workflowSettings">
+                        <div class="mb-3">
+                            <label for="workflowName" class="form-label">Workflow Name</label>
+                            <input type="text" class="form-control" id="workflowName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="workflowDescription" class="form-label">Description</label>
+                            <textarea class="form-control" id="workflowDescription" rows="2"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="workflowFrequency" class="form-label">Frequency</label>
+                            <select class="form-select" id="workflowFrequency">
+                                <option value="once">Run Once</option>
+                                <option value="hourly">Hourly</option>
+                                <option value="daily">Daily</option>
+                                <option value="weekly">Weekly</option>
+                                <option value="monthly">Monthly</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="workflowTiming" class="form-label">Timing</label>
+                            <input type="time" class="form-control" id="workflowTiming">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Save Settings</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="elementConfigModal" tabindex="-1" aria-labelledby="elementConfigModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="elementConfigModalLabel">Configure Element</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Element configuration form will be dynamically inserted here -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" id="saveElementConfig">Save Configuration</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-4">
+        <h3>Workflow Management</h3>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Workflow Name</th>
+                    <th>Description</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="workflowList">
+                <!-- Existing workflows will be dynamically inserted here -->
+            </tbody>
+        </table>
+    </div>
+
+    <div class="mt-4">
+        <h3>Need Help?</h3>
+        <p>Check out our <a href="#" class="text-primary">automation guide</a> or watch our <a href="#" class="text-primary">video tutorial</a> to get started with AI process automation.</p>
+    </div>
+</div>

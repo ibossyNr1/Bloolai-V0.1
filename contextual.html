@@ -1,0 +1,158 @@
+<div class="contextual-page">
+    <h1 class="mb-4">Define Your Business Fundamentals</h1>
+    <p class="lead mb-5">Provide essential information about your business to help the AI understand your context and goals.</p>
+    
+    <form id="contextualForm">
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-header">
+                        <h2 class="h5 mb-0">Project Details</h2>
+                    </div>
+                    <div class="card-body">
+                        <p class="mb-3">Bloolai can support actively on filling all needed tabs to be edited if needed to establish your contextual fundament</p>
+                        <div class="mb-3">
+                            <label for="projectName" class="form-label">Project Name</label>
+                            <input type="text" class="form-control" id="projectName" value="Bloola AI Integration" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="domainName" class="form-label">Domain Name</label>
+                            <div class="input-group">
+                                <span class="input-group-text">https://www.</span>
+                                <input type="text" class="form-control" id="domainName" value="bloola.com" required>
+                                <button class="btn btn-outline-secondary" type="button" id="bloolaiHelp">Let Bloolai Help</button>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="industry" class="form-label">Industry</label>
+                            <select class="form-select" id="industry" required>
+                                <option value="technology" selected>Technology</option>
+                                <option value="finance">Finance</option>
+                                <option value="healthcare">Healthcare</option>
+                                <option value="retail">Retail</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-header">
+                        <h2 class="h5 mb-0">Competition Analysis</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <label for="competitors" class="form-label">List Your Main Competitors</label>
+                            <textarea class="form-control" id="competitors" rows="3" placeholder="Enter one competitor per line">OpenAI
+Anthropic
+Google AI
+Microsoft AI
+IBM Watson</textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="competitionFile" class="form-label">Upload Competition Analysis Document</label>
+                            <input type="file" class="form-control" id="competitionFile">
+                            <div class="form-text">Upload documents in PDF or DOCX format (max 10MB)</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="competitionNotes" class="form-label">Additional Notes on Competition</label>
+                            <textarea class="form-control" id="competitionNotes" rows="3">Focus on boutique AI development and custom SAAS solutions sets us apart from larger, more generalized competitors. Our strength lies in personalized service and deep technical expertise.</textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-header">
+                        <h2 class="h5 mb-0">Positioning</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <label for="missionStatement" class="form-label">Mission Statement</label>
+                            <textarea class="form-control" id="missionStatement" rows="3" required>To empower businesses through innovative AI solutions, delivering custom-built SAAS products that drive digital transformation and sustainable growth.</textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="valueProposition" class="form-label">Value Proposition</label>
+                            <textarea class="form-control" id="valueProposition" rows="3" required>Bloola delivers tailored AI solutions with a focus on quality, innovation, and client success. As a boutique development firm, we offer personalized attention and deep technical expertise that larger competitors cannot match.</textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Brand Attributes</label>
+                            <div class="row">
+                                <div class="col-md-4 mb-2">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="innovative" checked>
+                                        <label class="form-check-label" for="innovative">Innovative</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-2">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="reliable" checked>
+                                        <label class="form-check-label" for="reliable">Reliable</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-2">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="sustainable" checked>
+                                        <label class="form-check-label" for="sustainable">Sustainable</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-header">
+                        <h2 class="h5 mb-0">Customer Behavior</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <label for="demographics" class="form-label">Target Demographics</label>
+                            <textarea class="form-control" id="demographics" rows="3">Primary: Mid to large-sized enterprises seeking AI integration
+Secondary: Tech startups requiring custom AI solutions
+Location: Global, with focus on European and North American markets
+Decision Makers: CTOs, Technical Directors, Innovation Leaders</textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="customerPersonas" class="form-label">Customer Personas</label>
+                            <textarea class="form-control" id="customerPersonas" rows="3">1. Enterprise Tech Leader: Seeking scalable AI solutions for large operations
+2. Startup Founder: Looking for innovative AI integration to gain competitive edge
+3. Digital Transformation Manager: Needs AI solutions to modernize existing systems</textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="painPoints" class="form-label">Customer Pain Points</label>
+                            <textarea class="form-control" id="painPoints" rows="3">1. Difficulty finding AI solutions that fit specific business needs
+2. Challenges with integrating AI into existing systems
+3. Need for reliable, scalable AI solutions with ongoing support
+4. Concerns about AI implementation costs and ROI</textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-between mt-4">
+            <button type="button" class="btn btn-secondary" id="saveContextual">Save Progress</button>
+            <button type="submit" class="btn btn-primary">Save and Continue</button>
+        </div>
+    </form>
+
+    <div class="mt-4">
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 40%;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">40%</div>
+        </div>
+        <p class="text-muted mt-2">Progress: 2 of 5 sections completed</p>
+    </div>
+
+    <div class="mt-4">
+        <h3>Need Help?</h3>
+        <p>Check out our <a href="#" class="text-primary">guide on defining business context</a> or <a href="#" class="text-primary">contact support</a>.</p>
+    </div>
+</div>

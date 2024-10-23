@@ -1,0 +1,244 @@
+<div class="profession-page">
+    <h1 class="mb-4">Professional Profile</h1>
+    <p class="lead mb-5">Review and customize your professional profile to help AI understand your context and preferences.</p>
+
+    <div class="card">
+        <div class="card-body">
+            <ul class="nav nav-tabs" id="professionTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="role-tab" data-bs-toggle="tab" data-bs-target="#role" type="button" role="tab">Role & Title</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="responsibilities-tab" data-bs-toggle="tab" data-bs-target="#responsibilities" type="button" role="tab">Responsibilities</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="skills-tab" data-bs-toggle="tab" data-bs-target="#skills" type="button" role="tab">Skills</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="experience-tab" data-bs-toggle="tab" data-bs-target="#experience" type="button" role="tab">Experience</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="workstyle-tab" data-bs-toggle="tab" data-bs-target="#workstyle" type="button" role="tab">Work Style</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="tools-tab" data-bs-toggle="tab" data-bs-target="#tools" type="button" role="tab">Tools</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="interests-tab" data-bs-toggle="tab" data-bs-target="#interests" type="button" role="tab">Interests</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="more-tab" data-bs-toggle="tab" data-bs-target="#more" type="button" role="tab">More</button>
+                </li>
+            </ul>
+
+            <div class="tab-content mt-4" id="professionTabContent">
+                <!-- Role & Title Tab -->
+                <div class="tab-pane fade show active" id="role" role="tabpanel">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Current Position</label>
+                            <input type="text" class="form-control" value="Chief Technology Officer (CTO)" readonly>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Department</label>
+                            <input type="text" class="form-control" value="Technology and Development" readonly>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Seniority Level</label>
+                            <input type="text" class="form-control" value="Executive" readonly>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Responsibilities Tab -->
+                <div class="tab-pane fade" id="responsibilities" role="tabpanel">
+                    <div class="mb-4">
+                        <h5>Core Duties</h5>
+                        <ul class="list-group">
+                            <li class="list-group-item">Oversee technical strategy</li>
+                            <li class="list-group-item">Lead development teams</li>
+                            <li class="list-group-item">Drive innovation in AI solutions</li>
+                            <li class="list-group-item">Manage technical resources</li>
+                        </ul>
+                    </div>
+                    <div class="mb-4">
+                        <h5>Regular Activities</h5>
+                        <ul class="list-group">
+                            <li class="list-group-item">Strategic planning</li>
+                            <li class="list-group-item">Project oversight</li>
+                            <li class="list-group-item">Technology stack decisions</li>
+                            <li class="list-group-item">Client consultations</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Skills Tab -->
+                <div class="tab-pane fade" id="skills" role="tabpanel">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5>Technical Skills</h5>
+                            <div class="mb-3">
+                                <label class="form-label">Programming Languages</label>
+                                <input type="text" class="form-control" value="Python, TensorFlow, JavaScript" readonly>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Cloud Platforms</label>
+                                <input type="text" class="form-control" value="AWS, Azure" readonly>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h5>Soft Skills</h5>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" checked disabled>
+                                <label class="form-check-label">Leadership</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" checked disabled>
+                                <label class="form-check-label">Strategic Thinking</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" checked disabled>
+                                <label class="form-check-label">Problem Solving</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Tab -->
+                <div class="tab-pane fade" id="experience" role="tabpanel">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Years in Current Role</label>
+                            <input type="text" class="form-control" value="5 years" readonly>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Total Industry Experience</label>
+                            <input type="text" class="form-control" value="10+ years" readonly>
+                        </div>
+                        <div class="col-12 mb-3">
+                            <label class="form-label">Previous Positions</label>
+                            <textarea class="form-control" rows="3" readonly>Lead AI Developer
+Senior Data Scientist</textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Work Style Tab -->
+                <div class="tab-pane fade" id="workstyle" role="tabpanel">
+                    <div class="mb-4">
+                        <h5>Communication Style</h5>
+                        <select class="form-select" disabled>
+                            <option selected>Direct and collaborative</option>
+                            <option>Formal and structured</option>
+                            <option>Casual and flexible</option>
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <h5>Decision Making</h5>
+                        <select class="form-select" disabled>
+                            <option selected>Data-driven</option>
+                            <option>Intuitive</option>
+                            <option>Consensus-based</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Tools Tab -->
+                <div class="tab-pane fade" id="tools" role="tabpanel">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5>Development Tools</h5>
+                            <ul class="list-group">
+                                <li class="list-group-item">TensorFlow</li>
+                                <li class="list-group-item">PyTorch</li>
+                                <li class="list-group-item">GitHub</li>
+                                <li class="list-group-item">Docker</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h5>Productivity Tools</h5>
+                            <ul class="list-group">
+                                <li class="list-group-item">Slack</li>
+                                <li class="list-group-item">Trello</li>
+                                <li class="list-group-item">Microsoft Teams</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interests Tab -->
+                <div class="tab-pane fade" id="interests" role="tabpanel">
+                    <div class="mb-4">
+                        <h5>Areas of Expertise</h5>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" checked disabled>
+                            <label class="form-check-label">Natural Language Processing</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" checked disabled>
+                            <label class="form-check-label">Computer Vision</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" checked disabled>
+                            <label class="form-check-label">AI in Healthcare</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- More Tab -->
+                <div class="tab-pane fade" id="more" role="tabpanel">
+                    <div class="accordion" id="moreAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#languageCollapse">
+                                    Language & Cultural
+                                </button>
+                            </h2>
+                            <div id="languageCollapse" class="accordion-collapse collapse show">
+                                <div class="accordion-body">
+                                    <div class="mb-3">
+                                        <label class="form-label">Primary Language</label>
+                                        <input type="text" class="form-control" value="English" readonly>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Additional Languages</label>
+                                        <input type="text" class="form-control" value="Basic Spanish, Mandarin" readonly>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#availabilityCollapse">
+                                    Availability
+                                </button>
+                            </h2>
+                            <div id="availabilityCollapse" class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    <div class="mb-3">
+                                        <label class="form-label">Working Hours</label>
+                                        <input type="text" class="form-control" value="9 AM – 6 PM" readonly>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Time Zone</label>
+                                        <input type="text" class="form-control" value="UTC-5 (Eastern Time)" readonly>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="d-flex justify-content-between mt-4">
+        <button type="button" class="btn btn-secondary" id="editProfile">Edit Profile</button>
+        <button type="button" class="btn btn-primary" id="saveProfile">Save Changes</button>
+    </div>
+
+    <div class="alert alert-info mt-4">
+        <i class="fas fa-info-circle me-2"></i>
+        This profile information helps personalize AI interactions and recommendations to match your professional context.
+    </div>
+</div>

@@ -1,0 +1,162 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 108px;
+}
+
+#top-menu {
+    height: 108px;
+    background-color: #f0f8ff !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #0045AC;
+}
+
+/* Modal styles */
+.modal {
+    padding-top: 150px;
+}
+
+.modal-header {
+    background-color: #f0f8ff;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.modal-footer {
+    background-color: #f0f8ff;
+    border-top: 1px solid #e9ecef;
+}
+
+.sidebar {
+    position: fixed;
+    top: 108px;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    padding: 0;
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+    width: 60px;
+    transition: width 0.3s ease;
+    overflow-x: hidden;
+    white-space: nowrap;
+}
+
+.sidebar:hover {
+    width: 175px;
+}
+
+.sidebar .nav-link {
+    font-weight: 500;
+    color: #333;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0.75rem;
+}
+
+.sidebar .nav-link i {
+    font-size: 1.2rem;
+    width: 36px;
+    text-align: center;
+    margin-right: 0.75rem;
+    transition: margin-right 0.3s ease;
+}
+
+.sidebar:hover .nav-link i {
+    margin-right: 1rem;
+}
+
+.sidebar .nav-link span {
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateX(-20px);
+}
+
+.sidebar:hover .nav-link span {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.sidebar .nav-link.active {
+    color: #007bff;
+    background-color: #e9ecef;
+}
+
+main {
+    margin-left: 60px;
+    transition: margin-left 0.3s ease;
+    display: flex;
+    justify-content: center;
+    padding-left: 1rem;
+}
+
+.sidebar:hover + main {
+    margin-left: 175px;
+}
+
+#mainContent {
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px;
+}
+
+.nav-link:hover,
+.btn:hover,
+.dropdown-item:hover {
+    background-color: #ffa500 !important;
+    color: #fff !important;
+    border-color: #ffa500 !important;
+}
+
+.btn-outline-primary:hover,
+.btn-primary:hover,
+.btn-outline-secondary:hover,
+.btn-secondary:hover,
+.btn-success:hover {
+    background-color: #ffa500 !important;
+    color: #fff !important;
+    border-color: #ffa500 !important;
+}
+
+.dropdown-item:hover {
+    background-color: #ffa500 !important;
+    color: #fff !important;
+}
+
+.sidebar .nav-link.active:hover {
+    background-color: #ffa500 !important;
+    color: #fff !important;
+}
+
+/* Wizard page specific styles */
+.color-sample {
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+    border: 1px solid #dee2e6;
+}
+
+.analysis-steps .step {
+    margin-bottom: 0.5rem;
+}
+
+.progress {
+    height: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    main {
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    .sidebar:hover + main {
+        margin-left: 0;
+    }
+
+    #mainContent {
+        padding: 10px;
+    }
+}

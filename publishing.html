@@ -1,0 +1,98 @@
+<div class="publishing-page">
+    <h1 class="mb-4">Market Your Business with AI Agents</h1>
+    <p class="lead mb-5">Automate your business promotion with intelligent marketing agents.</p>
+
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h2 class="h5 mb-0">Marketing Agents</h2>
+                </div>
+                <div class="card-body">
+                    <div id="marketingAgentsList">
+                        <!-- Marketing agent cards will be dynamically inserted here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h2 class="h5 mb-0">Performance Analytics</h2>
+                </div>
+                <div class="card-body">
+                    <canvas id="performanceChart"></canvas>
+                    <div id="performanceMetrics" class="mt-3">
+                        <!-- Performance metrics will be dynamically inserted here -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h2 class="h5 mb-0">Recommendations</h2>
+                </div>
+                <div class="card-body">
+                    <ul id="recommendationsList" class="list-group list-group-flush">
+                        <!-- Recommendations will be dynamically inserted here -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="agentConfigModal" tabindex="-1" aria-labelledby="agentConfigModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="agentConfigModalLabel">Agent Configuration</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Agent configuration form will be dynamically inserted here -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" id="saveAgentConfig">Save Configuration</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="scheduleModal" tabindex="-1" aria-labelledby="scheduleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="scheduleModalLabel">Schedule Management</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Schedule management form will be dynamically inserted here -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" id="saveSchedule">Save Schedule</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="contentPreviewModal" tabindex="-1" aria-labelledby="contentPreviewModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="contentPreviewModalLabel">Content Preview</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Content preview will be dynamically inserted here -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="approveContent">Approve Content</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

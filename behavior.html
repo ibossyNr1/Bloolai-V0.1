@@ -1,0 +1,142 @@
+<div class="behavior-page">
+    <h1 class="mb-4">Define How Your AI Communicates</h1>
+    <p class="lead mb-5">Shape your AI's personality to align with your brand and communication goals.</p>
+    
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="card-header">Brand Voice</div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <label class="form-label">Select voice characteristics:</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="voiceProfessional">
+                            <label class="form-check-label" for="voiceProfessional">Professional</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="voiceCasual">
+                            <label class="form-check-label" for="voiceCasual">Casual</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="voiceFriendly">
+                            <label class="form-check-label" for="voiceFriendly">Friendly</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="voiceAuthoritative">
+                            <label class="form-check-label" for="voiceAuthoritative">Authoritative</label>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="customVoice" class="form-label">Custom voice descriptor:</label>
+                        <input type="text" class="form-control" id="customVoice" placeholder="Enter custom voice">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="card-header">Tone</div>
+                <div class="card-body">
+                    <label class="form-label">Select communication tone:</label>
+                    <div class="btn-group w-100" role="group" aria-label="Tone selection">
+                        <input type="radio" class="btn-check" name="tone" id="toneFormal" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="toneFormal">Formal</label>
+                        
+                        <input type="radio" class="btn-check" name="tone" id="toneNeutral" autocomplete="off" checked>
+                        <label class="btn btn-outline-primary" for="toneNeutral">Neutral</label>
+                        
+                        <input type="radio" class="btn-check" name="tone" id="toneInformal" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="toneInformal">Informal</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="card-header">Humor</div>
+                <div class="card-body">
+                    <label for="humorSlider" class="form-label">Humor level:</label>
+                    <input type="range" class="form-range" id="humorSlider" min="0" max="100" step="1">
+                    <div class="d-flex justify-content-between">
+                        <span>None</span>
+                        <span>Moderate</span>
+                        <span>High</span>
+                    </div>
+                    <div class="mt-3">
+                        <strong>Example:</strong>
+                        <p id="humorExample" class="mt-2">The AI will respond with a neutral tone, avoiding jokes or humorous remarks.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="card-header">Concreteness</div>
+                <div class="card-body">
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="concretenessSwitch">
+                        <label class="form-check-label" for="concretenessSwitch">Toggle between Abstract and Concrete</label>
+                    </div>
+                    <p id="concretenessExplanation" class="mt-3">
+                        Abstract: The AI will provide general concepts and theories.
+                        Concrete: The AI will focus on specific examples and practical applications.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="card-header">Sourcing Preferences</div>
+                <div class="card-body">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="includeSources">
+                        <label class="form-check-label" for="includeSources">Include sources in responses</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="peerReviewedOnly">
+                        <label class="form-check-label" for="peerReviewedOnly">Use only peer-reviewed sources</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="card-header">Executive Style</div>
+                <div class="card-body">
+                    <select class="form-select" id="executiveStyle">
+                        <option value="overview">High-Level Overview</option>
+                        <option value="detailed">Detailed Analysis</option>
+                        <option value="bullet">Bullet Points</option>
+                        <option value="pros-cons">Pros and Cons</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row mt-4">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">Real-time Preview</div>
+                <div class="card-body">
+                    <h5>Example AI Response:</h5>
+                    <p id="previewText">This is a placeholder for the AI's response based on your current settings. As you adjust the options above, this text will update to reflect how your AI would communicate.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="d-flex justify-content-between mt-4">
+        <button type="button" class="btn btn-secondary" id="resetDefaults">Reset to Defaults</button>
+        <button type="button" class="btn btn-primary" id="saveBehavior">Save Behavior Settings</button>
+    </div>
+</div>

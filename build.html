@@ -1,0 +1,168 @@
+<div class="build-page">
+    <h1 class="mb-4">Start Building Your Agents</h1>
+    <p class="lead mb-5">Create specialized AI agents tailored to your business needs with our step-by-step wizard.</p>
+
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h2 class="h5 mb-0">Agent Creation Steps</h2>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group list-group-flush" id="creationSteps">
+                        <li class="list-group-item active" data-step="1">1. Define Goal</li>
+                        <li class="list-group-item" data-step="2">2. Description</li>
+                        <li class="list-group-item" data-step="3">3. Learning Data</li>
+                        <li class="list-group-item" data-step="4">4. Automation Steps</li>
+                        <li class="list-group-item" data-step="5">5. Integrations</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h2 class="h5 mb-0">GPT Integration</h2>
+                </div>
+                <div class="card-body">
+                    <button id="importGPT" class="btn btn-outline-primary btn-sm w-100">Import from ChatGPT</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-9">
+            <div class="card mb-4">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h2 class="h5 mb-0">Agent Creation Wizard</h2>
+                    <div>
+                        <button id="saveAgent" class="btn btn-primary btn-sm me-2">Save Agent</button>
+                        <button id="deployAgent" class="btn btn-success btn-sm">Deploy Agent</button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <form id="agentCreationForm">
+                        <!-- Step 1: Define Goal -->
+                        <div class="step-content" id="step1">
+                            <h3 class="h6 mb-3">Define Goal</h3>
+                            <div class="mb-3">
+                                <label for="agentName" class="form-label">Agent Name</label>
+                                <input type="text" class="form-control" id="agentName" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="agentGoal" class="form-label">Primary Goal</label>
+                                <textarea class="form-control" id="agentGoal" rows="3" required></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Description -->
+                        <div class="step-content" id="step2" style="display: none;">
+                            <h3 class="h6 mb-3">Description</h3>
+                            <div class="mb-3">
+                                <label for="agentDescription" class="form-label">Agent Description</label>
+                                <textarea class="form-control" id="agentDescription" rows="5" required></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="agentCapabilities" class="form-label">Key Capabilities</label>
+                                <input type="text" class="form-control" id="agentCapabilities" placeholder="Enter capabilities separated by commas">
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Learning Data -->
+                        <div class="step-content" id="step3" style="display: none;">
+                            <h3 class="h6 mb-3">Learning Data</h3>
+                            <div class="mb-3">
+                                <label for="learningData" class="form-label">Input Learning Data</label>
+                                <textarea class="form-control" id="learningData" rows="5"></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="dataUpload" class="form-label">Or Upload Data Files</label>
+                                <input type="file" class="form-control" id="dataUpload" multiple>
+                            </div>
+                        </div>
+
+                        <!-- Step 4: Automation Steps -->
+                        <div class="step-content" id="step4" style="display: none;">
+                            <h3 class="h6 mb-3">Automation Steps</h3>
+                            <div id="automationSteps">
+                                <!-- Automation steps will be dynamically added here -->
+                            </div>
+                            <button type="button" class="btn btn-outline-secondary btn-sm mt-2" id="addAutomationStep">Add Step</button>
+                        </div>
+
+                        <!-- Step 5: Integrations -->
+                        <div class="step-content" id="step5" style="display: none;">
+                            <h3 class="h6 mb-3">Integrations</h3>
+                            <div class="mb-3">
+                                <label class="form-label">Select Integrations</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="integrationSlack">
+                                    <label class="form-check-label" for="integrationSlack">Slack</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="integrationEmail">
+                                    <label class="form-check-label" for="integrationEmail">Email</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="integrationCRM">
+                                    <label class="form-check-label" for="integrationCRM">CRM System</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-3">
+                            <button type="button" class="btn btn-secondary" id="prevStep" style="display: none;">Previous</button>
+                            <button type="button" class="btn btn-primary" id="nextStep">Next</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h2 class="h5 mb-0">Agent Management</h2>
+                </div>
+                <div class="card-body">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Agent Name</th>
+                                <th>Goal</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="agentList">
+                            <!-- Existing agents will be dynamically inserted here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="gptImportModal" tabindex="-1" aria-labelledby="gptImportModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="gptImportModalLabel">Import from ChatGPT</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="gptImportForm">
+                        <div class="mb-3">
+                            <label for="gptApiKey" class="form-label">ChatGPT API Key</label>
+                            <input type="password" class="form-control" id="gptApiKey" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="gptAgentId" class="form-label">GPT Agent ID</label>
+                            <input type="text" class="form-control" id="gptAgentId" required>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" id="importGptAgent">Import Agent</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

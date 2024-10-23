@@ -1,0 +1,228 @@
+<div class="competition-page">
+    <h1 class="mb-4">Competitive Landscape Analysis</h1>
+    <p class="lead mb-5">Review and refine your competitive landscape to enhance AI's contextual understanding.</p>
+
+    <!-- Your Company Section -->
+    <div class="card mb-4">
+        <div class="card-header bg-primary text-white">
+            <h2 class="h5 mb-0">Your Company</h2>
+        </div>
+        <div class="card-body">
+            <div class="row align-items-center">
+                <div class="col-md-2">
+                    <img src="https://via.placeholder.com/100" alt="Company Logo" class="img-fluid rounded">
+                </div>
+                <div class="col-md-10">
+                    <h3 class="h4">Bloola.com</h3>
+                    <p class="text-muted mb-2">Boutique AI Software Development Firm</p>
+                    <div class="badge bg-primary me-1">AI Development</div>
+                    <div class="badge bg-primary me-1">SAAS</div>
+                    <div class="badge bg-primary">Custom Solutions</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Competitor Carousel -->
+    <div class="card mb-4">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <h2 class="h5 mb-0">Identified Competitors</h2>
+            <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#addCompetitorModal">
+                <i class="fas fa-plus me-1"></i> Add Competitor
+            </button>
+        </div>
+        <div class="card-body">
+            <div id="competitorCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="competitor-card">
+                                    <img src="https://via.placeholder.com/150" alt="Competitor 1" class="img-fluid mb-2">
+                                    <h4 class="h6">AI Solutions Corp</h4>
+                                    <p class="small text-muted">Enterprise AI Solutions</p>
+                                    <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#competitorDetailsModal">
+                                        View Details
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="competitor-card">
+                                    <img src="https://via.placeholder.com/150" alt="Competitor 2" class="img-fluid mb-2">
+                                    <h4 class="h6">Tech Innovators</h4>
+                                    <p class="small text-muted">AI Integration Services</p>
+                                    <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#competitorDetailsModal">
+                                        View Details
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="competitor-card">
+                                    <img src="https://via.placeholder.com/150" alt="Competitor 3" class="img-fluid mb-2">
+                                    <h4 class="h6">Smart Systems Ltd</h4>
+                                    <p class="small text-muted">Custom AI Development</p>
+                                    <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#competitorDetailsModal">
+                                        View Details
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#competitorCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#competitorCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Comparative Analysis -->
+    <div class="card mb-4">
+        <div class="card-header">
+            <h2 class="h5 mb-0">Comparative Analysis</h2>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Your Company</th>
+                            <th>Industry Average</th>
+                            <th>Competitive Edge</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>AI Development</td>
+                            <td><i class="fas fa-check-circle text-success"></i> Advanced</td>
+                            <td>Intermediate</td>
+                            <td><div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 85%"></div>
+                            </div></td>
+                        </tr>
+                        <tr>
+                            <td>Custom Solutions</td>
+                            <td><i class="fas fa-check-circle text-success"></i> High</td>
+                            <td>Medium</td>
+                            <td><div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 75%"></div>
+                            </div></td>
+                        </tr>
+                        <tr>
+                            <td>Market Presence</td>
+                            <td><i class="fas fa-check-circle text-success"></i> Growing</td>
+                            <td>Established</td>
+                            <td><div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 60%"></div>
+                            </div></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- AI Insights -->
+    <div class="card">
+        <div class="card-header">
+            <h2 class="h5 mb-0">AI-Generated Insights</h2>
+        </div>
+        <div class="card-body">
+            <div class="alert alert-info">
+                <i class="fas fa-lightbulb me-2"></i>
+                Based on the competitive analysis, here are key opportunities for differentiation:
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <h5 class="h6">Market Position</h5>
+                    <p class="mb-0">Focus on boutique, high-touch AI development services to differentiate from larger competitors.</p>
+                </li>
+                <li class="list-group-item">
+                    <h5 class="h6">Technical Edge</h5>
+                    <p class="mb-0">Leverage expertise in custom AI solutions to target specific industry niches.</p>
+                </li>
+                <li class="list-group-item">
+                    <h5 class="h6">Growth Opportunity</h5>
+                    <p class="mb-0">Expand service offerings in emerging AI technologies where competitors show gaps.</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Add Competitor Modal -->
+<div class="modal fade" id="addCompetitorModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Add Competitor</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form id="addCompetitorForm">
+                    <div class="mb-3">
+                        <label class="form-label">Company Name</label>
+                        <input type="text" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Website URL</label>
+                        <input type="url" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Primary Focus</label>
+                        <input type="text" class="form-control">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary">Add Competitor</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Competitor Details Modal -->
+<div class="modal fade" id="competitorDetailsModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Competitor Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="https://via.placeholder.com/200" alt="Competitor Logo" class="img-fluid mb-3">
+                        <h4>AI Solutions Corp</h4>
+                        <p class="text-muted">Enterprise AI Solutions Provider</p>
+                    </div>
+                    <div class="col-md-8">
+                        <h5>Strengths</h5>
+                        <ul class="mb-4">
+                            <li>Strong enterprise presence</li>
+                            <li>Established market reputation</li>
+                            <li>Comprehensive solution portfolio</li>
+                        </ul>
+                        <h5>Opportunities for Differentiation</h5>
+                        <ul>
+                            <li>More personalized service delivery</li>
+                            <li>Faster implementation timeline</li>
+                            <li>Specialized industry expertise</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-danger">Remove Competitor</button>
+            </div>
+        </div>
+    </div>
+</div>
